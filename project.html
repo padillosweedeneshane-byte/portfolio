@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Detail | Sweedene Shane Padillo</title>
+  <meta name="description" content="Case study and details of a Database and Networking project by Sweedene Shane Padillo.">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="Project Detail | Alex Chen">
+  <meta property="og:description" content="Case study and details of an app development project.">
+  <meta property="og:type" content="website">
+
+  <link rel="canonical" href="https://alexchen.dev/project.html">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- SCROLL PROGRESS -->
+  <div class="scroll-progress" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-accent">S</span>weedene<span class="logo-accent">.</span>dev
+      </a>
+      <nav class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="index.html#home" class="nav-link">Home</a>
+        <a href="index.html#skills" class="nav-link">Skills</a>
+        <a href="index.html#projects" class="nav-link active">Projects</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-icon" id="themeToggle" aria-label="Toggle theme">
+          <svg id="themeIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" role="navigation" aria-label="Mobile navigation">
+      <a href="index.html#home" class="nav-link">Home</a>
+      <a href="index.html#skills" class="nav-link">Skills</a>
+      <a href="index.html#projects" class="nav-link">Projects</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <article class="project-detail" id="projectDetail">
+        <a href="index.html#projects" class="project-back">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="19 12 5 12"/>
+            <polyline points="12 19 5 12 12 5"/>
+          </svg>
+          Back to Projects
+        </a>
+        <div id="projectContent">
+          <div class="flex-center" style="padding:6rem 0;color:var(--color-text-muted)">
+            <div class="spinner"></div>
+            <span style="margin-left:var(--space-3)">Loading project...</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-accent">S</span>weedene<span class="logo-accent">.</span>dev
+        </a>
+        <p class="footer-copy">&copy; 2026 Sweedene Shane Padillo. Built with vanilla everything.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script>
+    const projects = [
+      {
+        id: 1,
+        title: "SecurRoute Topology Analyzer",
+        category: "Networking",
+        role: "Network Architect",
+        year: "2026",
+        tags: ["Cisco Packet Tracer", "OSPF Routing", "VLAN", "ACL Security"],
+        image: "",
+        description: `
+          <p>The SecurRoute Topology Analyzer is an enterprise-grade network simulation designed for multi-branch environments. Built to address routing efficiency and data security, the simulation maps out hierarchical network design spanning three virtual departments with distinct security clearance tiers.</p>
+          <p>The major challenge was establishing dynamic routing configurations that could seamlessly switch paths during route failures. We configured Multi-Area OSPF (Open Shortest Path First) alongside Inter-VLAN routing to allow fast switching and isolation of high-security server rooms.</p>
+        `,
+        highlights: [
+          "Dynamic routing configuration with Multi-Area OSPF achieving sub-second path recovery",
+          "VLAN Trunking Protocol (VTP) implementation for centralized domain VLAN control",
+          "Granular Access Control Lists (ACLs) to block unauthorized subnets from server zones",
+          "DHCP relay agent integration for automated dynamic IP provisioning across branches",
+          "NAT configuration facilitating secure outbound enterprise-to-internet traffic translation"
+        ],
+        tech: `
+          <p><strong>Simulation Tools:</strong> Cisco Packet Tracer v8.2, GNS3 Network Emulator</p>
+          <p><strong>Network Protocols:</strong> OSPF, RIPv2, Inter-VLAN Routing, NAT, DHCP, 802.1Q encapsulation</p>
+          <p><strong>Security Protocols:</strong> Extended Access Control Lists (ACLs), Port Security, SSH Router Administration</p>
+        `,
+        results: [
+          "Achieved complete network failover under 500ms using OSPF link cost tuning",
+          "Isolated high-priority database servers from student subnets with 100% security success rate",
+          "Presented network topology design as a model project for academic network lab instruction",
+          "Optimized packet routing paths, reducing simulator latency by 12% across virtual locations"
+        ]
+      },
+      {
+        id: 2,
+        title: "ApexQuery Optimizer",
+        category: "Database",
+        role: "Database Administrator",
+        year: "2026",
+        tags: ["SQL Optimization", "MySQL Clusters", "Index Profiling", "Schema Normalization"],
+        image: "",
+        description: `
+          <p>ApexQuery Optimizer is a study on performance profiling, transactional locking analysis, and index tuning in high-throughput SQL databases. The project highlights methods to optimize complex queries dealing with thousands of transactions.</p>
+          <p>The core focus was eliminating slow query bottlenecks and deadlocks under heavy concurrent insert requests. By implementing composite indexes, database sharding, and table normalization rules, average query execution times were drastically improved.</p>
+        `,
+        highlights: [
+          "Refactored slow, un-indexed query execution paths to run in fractions of a second",
+          "Implemented MySQL Master-Slave replication clusters to separate read and write loads",
+          "Designed optimal index strategies using EXPLAIN profiling tools",
+          "Configured transactional safety settings adjusting locking behaviors to prevent deadlocks",
+          "Documented query execution paths under 500 parallel concurrent virtual users"
+        ],
+        tech: `
+          <p><strong>Database System:</strong> MySQL Enterprise Server, MariaDB Community Edition</p>
+          <p><strong>Tuning Tools:</strong> EXPLAIN execution plans, MySQL Workbench Performance Schema, custom script injectors</p>
+          <p><strong>Optimization Techniques:</strong> Composite indexing, query join rewriting, database schema caching, 3NF normalization</p>
+        `,
+        results: [
+          "Reduced execution times for complex multi-table joins by 82%",
+          "Eliminated concurrent transactional write conflicts and query deadlocks",
+          "Optimized relational structures to support 15K+ database transactions per minute",
+          "Achieved a 95% reduction in disk I/O queries via selective indexing schemes"
+        ]
+      },
+      {
+        id: 3,
+        title: "NetSentinel Intrusion System",
+        category: "Networking",
+        role: "Security Engineer",
+        year: "2025",
+        tags: ["Wireshark", "Packet Analysis", "ARP Spoofing", "Network Security"],
+        image: "",
+        description: `
+          <p>NetSentinel is a network traffic analysis system simulating packet captures to track and alert on malicious behavior. Using Wireshark log exports, the simulation detects ARP spoofing attacks, rogue DHCP offerings, and port scans on local segments.</p>
+          <p>The primary challenge was writing rules to distinguish ordinary network noise from structured host discovery attacks. The project delivers warning notifications based on packet headers, payload size, and transfer rates.</p>
+        `,
+        highlights: [
+          "Configured customized Wireshark filters to isolate ARP broadcast storms",
+          "Programmed threshold alerts to flag port scanning behaviors on sensitive ranges",
+          "Documented packet-level signatures of successful ARP spoofing attacks in lab journals",
+          "Built secure VLAN segmentation rules to limit broadcast domain damage",
+          "Simulated spoofed gateways to test client failovers and security warning systems"
+        ],
+        tech: `
+          <p><strong>Tools &amp; Frameworks:</strong> Wireshark Packet Analyzer, Nmap Security Scanner, Kali Linux Suite</p>
+          <p><strong>Protocols Analyzed:</strong> ARP, DHCP, ICMP, TCP, UDP, DNS</p>
+          <p><strong>Defenses Implemented:</strong> Dynamic ARP Inspection (DAI), DHCP Snooping, Port Security settings</p>
+        `,
+        results: [
+          "Successfully detected 100% of simulated ARP spoofing events in laboratory conditions",
+          "Created lightweight packet filter rules deployed to router mock systems",
+          "Reduced alert false-positive rate to under 2% through dynamic packet window metrics",
+          "Earned highest validation marks for threat detection documentation in school security courses"
+        ]
+      },
+      {
+        id: 4,
+        title: "ISUFST Academic DB Schema",
+        category: "Database",
+        role: "Database Engineer",
+        year: "2025",
+        tags: ["3NF Normalization", "ERD Design", "Referential Integrity", "MariaDB"],
+        image: "",
+        description: `
+          <p>This project is a complete relational database design addressing academic course management, student registrations, faculty loads, and grade reports specifically modeled for ISUFST-SEC. Built with strict reference constraint policies, the schema supports multi-user enrollments.</p>
+          <p>The core objective was ensuring database integrity by resolving insertion, update, and deletion anomalies. By normalizing the data model up to Third Normal Form (3NF), the resulting system guarantees consistency across all school departments.</p>
+        `,
+        highlights: [
+          "Designed comprehensive Entity-Relationship Diagram (ERD) mapping 15 relational tables",
+          "Normalized data structures from flat files to strict Third Normal Form (3NF)",
+          "Established cascade triggers to automate update and delete operations safely",
+          "Authored complex SQL transaction scripts simulating student semestral course sign-ups",
+          "Enforced business logic constraints including course prerequisite checking via schema triggers"
+        ],
+        tech: `
+          <p><strong>Relational Engine:</strong> MariaDB, phpMyAdmin administration interface</p>
+          <p><strong>Modeling Tools:</strong> dbdiagram.io, draw.io ERD mapping suite</p>
+          <p><strong>Scripting Language:</strong> SQL (Data Definition Language &amp; Data Manipulation Language)</p>
+        `,
+        results: [
+          "Created a zero-redundancy data model reducing database size overhead by 30%",
+          "Validated database integrity through 50+ rigorous test insertions and updates",
+          "Delivered complete schema scripts ready for staging deployment",
+          "Acquired a grade of 1.0 (Excellent) for the database architecture project category"
+        ]
+      }
+    ];
+
+    function getProjectSVG(id) {
+      const svgs = {
+        1: '<circle cx="400" cy="225" r="140" fill="rgba(88,166,255,0.08)"/><circle cx="400" cy="225" r="100" fill="rgba(88,166,255,0.12)"/><circle cx="400" cy="225" r="60" fill="rgba(88,166,255,0.18)"/>',
+        2: '<rect x="150" y="130" width="500" height="200" rx="12" fill="rgba(163,113,247,0.08)" stroke="rgba(163,113,247,0.15)" stroke-width="2"/><rect x="200" y="170" width="400" height="120" rx="6" fill="rgba(163,113,247,0.1)"/>',
+        3: '<path d="M120 300 L220 240 L300 270 L420 160 L510 200 L680 110" stroke="#3fb950" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/><path d="M120 330 L220 270 L300 300 L420 190 L510 230 L680 140" stroke="#3fb950" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.2"/>',
+        4: '<circle cx="400" cy="180" r="50" fill="rgba(210,153,34,0.12)" stroke="rgba(210,153,34,0.35)" stroke-width="2"/><circle cx="250" cy="300" r="36" fill="rgba(210,153,34,0.08)" stroke="rgba(210,153,34,0.25)" stroke-width="1.5"/><circle cx="550" cy="300" r="36" fill="rgba(210,153,34,0.08)" stroke="rgba(210,153,34,0.25)" stroke-width="1.5"/><line x1="352" y1="205" x2="280" y2="272" stroke="rgba(210,153,34,0.35)" stroke-width="2"/><line x1="448" y1="205" x2="520" y2="272" stroke="rgba(210,153,34,0.35)" stroke-width="2"/>'
+      };
+      return svgs[id] || svgs[1];
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const id = parseInt(params.get('id')) || 1;
+      const project = projects.find(p => p.id === id) || projects[0];
+
+      const content = document.getElementById('projectContent');
+      content.innerHTML = `
+        <div class="project-detail-header" data-reveal data-revealed>
+          <h1 class="project-detail-title">${project.title}</h1>
+          <dl class="project-detail-meta">
+            <div><dt>Role</dt><dd>${project.role}</dd></div>
+            <div><dt>Year</dt><dd>${project.year}</dd></div>
+            <div><dt>Category</dt><dd>${project.category}</dd></div>
+          </dl>
+          <div class="project-detail-tags">
+            ${project.tags.map(tag => `<span class="project-tag">${tag}</span>`).join('')}
+          </div>
+          <div style="width:100%;aspect-ratio:16/9;border-radius:var(--radius-lg);background:var(--color-bg-elevated);border:1px solid var(--color-border);overflow:hidden">
+            <svg viewBox="0 0 800 450" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="800" height="450" fill="var(--color-bg-elevated)"/>
+              ${getProjectSVG(project.id)}
+              <text x="400" y="248" text-anchor="middle" fill="var(--color-text-muted)" font-size="64" font-weight="700" font-family="system-ui,sans-serif" opacity="0.5">${project.title[0]}</text>
+            </svg>
+          </div>
+        </div>
+
+        <div class="project-detail-section" data-reveal data-reveal-delay="1">
+          <h2>Overview</h2>
+          ${project.description}
+        </div>
+
+        <div class="project-detail-section" data-reveal data-reveal-delay="2">
+          <h2>Key Highlights</h2>
+          <ul>
+            ${project.highlights.map(h => `<li>${h}</li>`).join('')}
+          </ul>
+        </div>
+
+        <div class="project-detail-section" data-reveal data-reveal-delay="3">
+          <h2>Tech Stack</h2>
+          ${project.tech}
+        </div>
+
+        <div class="project-detail-section" data-reveal data-reveal-delay="4">
+          <h2>Results</h2>
+          <ul>
+            ${project.results.map(r => `<li>${r}</li>`).join('')}
+          </ul>
+        </div>
+
+        <div style="margin-top:var(--space-12)" data-reveal>
+          <a href="index.html#projects" class="btn btn-secondary btn-lg">&larr; Back to All Projects</a>
+        </div>
+      `;
+
+      document.title = project.title + ' | Sweedene Shane Padillo';
+    });
+  </script>
+</body>
+</html>
